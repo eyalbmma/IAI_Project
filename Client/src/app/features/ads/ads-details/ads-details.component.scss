@@ -1,0 +1,162 @@
+.ads-details-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.error-state {
+  color: #dc3545;
+  background: #f8d7da;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.ad-details {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.ad-content {
+  padding: 30px;
+}
+
+.ad-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.ad-meta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.ad-price {
+  font-weight: 600;
+  font-size: 20px;
+  color: #28a745;
+}
+
+.ad-category {
+  background: #e9ecef;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.ad-date {
+  color: #999;
+}
+
+.ad-description,
+.ad-contact,
+.ad-location {
+  margin-bottom: 30px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  p {
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 10px;
+  }
+}
+
+.contact-details,
+.location-details {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 4px;
+
+  p {
+    margin-bottom: 10px;
+
+    strong {
+      color: #333;
+      margin-right: 10px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: #5a6268;
+  }
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: #c82333;
+  }
+}
+

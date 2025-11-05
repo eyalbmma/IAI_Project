@@ -1,0 +1,189 @@
+<div class="ads-form-container">
+  <header class="form-header">
+    <h1>{{ isEditMode ? 'Edit Ad' : 'Create New Ad' }}</h1>
+    <button type="button" class="btn btn-secondary" (click)="onCancel()" aria-label="Cancel">
+      Cancel
+    </button>
+  </header>
+
+  <!-- Loading State -->
+  <div *ngIf="loading && !adForm.dirty" class="loading-state" role="status" aria-live="polite">
+    <p>{{ isEditMode ? 'Loading ad...' : 'Saving...' }}</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error" class="error-state" role="alert">
+    <p>{{ error }}</p>
+  </div>
+
+  <form [formGroup]="adForm" (ngSubmit)="onSubmit()" *ngIf="!loading || adForm.dirty" class="ad-form">
+    <!-- Title -->
+    <div class="form-group">
+      <label for="title">Title <span class="required">*</span></label>
+      <input
+        id="title"
+        type="text"
+        formControlName="title"
+        [class.invalid]="getFieldError('title')"
+        aria-label="Ad title"
+        aria-required="true"
+      />
+      <span *ngIf="getFieldError('title')" class="error-message" role="alert">
+        {{ getFieldError('title') }}
+      </span>
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description">Description <span class="required">*</span></label>
+      <textarea
+        id="description"
+        formControlName="description"
+        rows="5"
+        [class.invalid]="getFieldError('description')"
+        aria-label="Ad description"
+        aria-required="true"
+      ></textarea>
+      <span *ngIf="getFieldError('description')" class="error-message" role="alert">
+        {{ getFieldError('description') }}
+      </span>
+    </div>
+
+    <!-- Price and Category -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input
+          id="price"
+          type="number"
+          formControlName="price"
+          min="0"
+          step="0.01"
+          [class.invalid]="getFieldError('price')"
+          aria-label="Ad price"
+        />
+        <span *ngIf="getFieldError('price')" class="error-message" role="alert">
+          {{ getFieldError('price') }}
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input
+          id="category"
+          type="text"
+          formControlName="category"
+          aria-label="Ad category"
+        />
+      </div>
+    </div>
+
+    <!-- Contact Information -->
+    <fieldset class="contact-section">
+      <legend>Contact Information <span class="required">*</span></legend>
+      <div formGroupName="contact">
+        <div class="form-group">
+          <label for="contactName">Name <span class="required">*</span></label>
+          <input
+            id="contactName"
+            type="text"
+            formControlName="name"
+            [class.invalid]="getFieldError('contact.name')"
+            aria-label="Contact name"
+            aria-required="true"
+          />
+          <span *ngIf="getFieldError('contact.name')" class="error-message" role="alert">
+            {{ getFieldError('contact.name') }}
+          </span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactPhone">Phone</label>
+            <input
+              id="contactPhone"
+              type="tel"
+              formControlName="phone"
+              aria-label="Contact phone"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input
+              id="contactEmail"
+              type="email"
+              formControlName="email"
+              [class.invalid]="getFieldError('contact.email')"
+              aria-label="Contact email"
+            />
+            <span *ngIf="getFieldError('contact.email')" class="error-message" role="alert">
+              {{ getFieldError('contact.email') }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <span *ngIf="getContactError()" class="error-message" role="alert">
+        {{ getContactError() }}
+      </span>
+    </fieldset>
+
+    <!-- Location Information -->
+    <fieldset class="location-section">
+      <legend>Location (Optional)</legend>
+      <div formGroupName="location">
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input
+            id="address"
+            type="text"
+            formControlName="address"
+            placeholder="Enter address"
+            aria-label="Location address"
+          />
+          <small class="hint">If address is provided, latitude and longitude are required</small>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="lat">Latitude</label>
+            <input
+              id="lat"
+              type="number"
+              formControlName="lat"
+              step="any"
+              placeholder="e.g., 31.7683"
+              aria-label="Latitude"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="lng">Longitude</label>
+            <input
+              id="lng"
+              type="number"
+              formControlName="lng"
+              step="any"
+              placeholder="e.g., 35.2137"
+              aria-label="Longitude"
+            />
+          </div>
+        </div>
+      </div>
+      <span *ngIf="getLocationError()" class="error-message" role="alert">
+        {{ getLocationError() }}
+      </span>
+    </fieldset>
+
+    <!-- Form Actions -->
+    <div class="form-actions">
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">
+        Cancel
+      </button>
+      <button type="submit" class="btn btn-primary" [disabled]="loading">
+        {{ isEditMode ? 'Update' : 'Create' }} Ad
+      </button>
+    </div>
+  </form>
+</div>
+

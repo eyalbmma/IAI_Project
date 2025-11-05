@@ -1,0 +1,71 @@
+<div class="ads-details-container">
+  <!-- Loading State -->
+  <div *ngIf="loading" class="loading-state" role="status" aria-live="polite">
+    <p>Loading ad...</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error && !loading" class="error-state" role="alert">
+    <p>{{ error }}</p>
+    <button type="button" class="btn btn-secondary" (click)="goBack()">
+      Back to List
+    </button>
+  </div>
+
+  <!-- Ad Details -->
+  <div *ngIf="!loading && !error && ad" class="ad-details">
+    <header class="details-header">
+      <button type="button" class="btn btn-secondary" (click)="goBack()" aria-label="Back to list">
+        ← Back
+      </button>
+      <div class="actions">
+        <button type="button" class="btn btn-primary" (click)="onEdit()" [disabled]="deleting" aria-label="Edit ad">
+          Edit
+        </button>
+        <button type="button" class="btn btn-danger" (click)="onDelete()" [disabled]="deleting" aria-label="Delete ad">
+          {{ deleting ? 'Deleting...' : 'Delete' }}
+        </button>
+      </div>
+    </header>
+
+    <article class="ad-content">
+      <h1 class="ad-title">{{ ad.title }}</h1>
+
+      <div class="ad-meta">
+        <span *ngIf="ad.price" class="ad-price">${{ ad.price }}</span>
+        <span *ngIf="ad.category" class="ad-category">{{ ad.category }}</span>
+        <span class="ad-date">Created: {{ ad.createdAt | date: 'medium' }}</span>
+        <span *ngIf="ad.updatedAt !== ad.createdAt" class="ad-date">
+          Updated: {{ ad.updatedAt | date: 'medium' }}
+        </span>
+      </div>
+
+      <div class="ad-description">
+        <h2>Description</h2>
+        <p>{{ ad.description }}</p>
+      </div>
+
+      <div class="ad-contact">
+        <h2>Contact Information</h2>
+        <div class="contact-details">
+          <p><strong>Name:</strong> {{ ad.contact.name }}</p>
+          <p *ngIf="ad.contact.phone"><strong>Phone:</strong> {{ ad.contact.phone }}</p>
+          <p *ngIf="ad.contact.email"><strong>Email:</strong> 
+            <a [href]="'mailto:' + ad.contact.email">{{ ad.contact.email }}</a>
+          </p>
+        </div>
+      </div>
+
+      <div *ngIf="ad.location" class="ad-location">
+        <h2>Location</h2>
+        <div class="location-details">
+          <p *ngIf="ad.location.address"><strong>Address:</strong> {{ ad.location.address }}</p>
+          <p *ngIf="ad.location.lat && ad.location.lng">
+            <strong>Coordinates:</strong> {{ ad.location.lat }}, {{ ad.location.lng }}
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+

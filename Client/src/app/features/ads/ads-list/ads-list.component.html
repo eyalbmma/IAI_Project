@@ -1,0 +1,146 @@
+<div class="ads-list-container">
+  <header class="ads-header">
+    <h1>Ads Board</h1>
+    <button type="button" class="btn btn-primary" (click)="goToCreate()" aria-label="Create new ad">
+      Create New Ad
+    </button>
+  </header>
+
+  <div class="search-section">
+    <app-search-bar
+      placeholder="Search ads..."
+      (searchChange)="onSearchChange($event)"
+    ></app-search-bar>
+
+    <form [formGroup]="searchForm" class="filters-form">
+      <div class="filter-row">
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input
+            id="category"
+            type="text"
+            formControlName="category"
+            placeholder="Category"
+            aria-label="Filter by category"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="minPrice">Min Price</label>
+          <input
+            id="minPrice"
+            type="number"
+            formControlName="minPrice"
+            placeholder="Min"
+            min="0"
+            aria-label="Minimum price"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="maxPrice">Max Price</label>
+          <input
+            id="maxPrice"
+            type="number"
+            formControlName="maxPrice"
+            placeholder="Max"
+            min="0"
+            aria-label="Maximum price"
+          />
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input
+              type="checkbox"
+              formControlName="hasLocation"
+              aria-label="Has location"
+            />
+            Has Location
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="sortBy">Sort By</label>
+          <select id="sortBy" formControlName="sortBy" aria-label="Sort by">
+            <option value="createdAt">Date</option>
+            <option value="price">Price</option>
+            <option value="title">Title</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sortDir">Order</label>
+          <select id="sortDir" formControlName="sortDir" aria-label="Sort direction">
+            <option value="desc">Descending</option>
+            <option value="asc">Ascending</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Loading State -->
+  <div *ngIf="loading" class="loading-state" role="status" aria-live="polite">
+    <p>Loading ads...</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error && !loading" class="error-state" role="alert">
+    <p>{{ error }}</p>
+  </div>
+
+  <!-- Empty State -->
+  <div *ngIf="!loading && !error && ads.length === 0" class="empty-state">
+    <p>No ads found. <a routerLink="/ads/new">Create the first one!</a></p>
+  </div>
+
+  <!-- Ads Grid -->
+  <div *ngIf="!loading && !error && ads.length > 0" class="ads-grid">
+    <article
+      *ngFor="let ad of ads"
+      class="ad-card"
+      (click)="goToDetails(ad.id)"
+      [attr.aria-label]="'View ad: ' + ad.title"
+      tabindex="0"
+      (keydown.enter)="goToDetails(ad.id)"
+    >
+      <h2 class="ad-title">{{ ad.title }}</h2>
+      <p class="ad-description">{{ ad.description }}</p>
+      <div class="ad-meta">
+        <span *ngIf="ad.price" class="ad-price">${{ ad.price }}</span>
+        <span *ngIf="ad.category" class="ad-category">{{ ad.category }}</span>
+        <span class="ad-date">{{ ad.createdAt | date: 'short' }}</span>
+      </div>
+      <div class="ad-contact">
+        <span>{{ ad.contact.name }}</span>
+        <span *ngIf="ad.contact.phone">{{ ad.contact.phone }}</span>
+        <span *ngIf="ad.contact.email">{{ ad.contact.email }}</span>
+      </div>
+    </article>
+  </div>
+
+  <!-- Pagination -->
+  <div *ngIf="!loading && !error && totalPages > 1" class="pagination" role="navigation" aria-label="Pagination">
+    <button
+      type="button"
+      [disabled]="page === 1"
+      (click)="onPageChange(page - 1)"
+      aria-label="Previous page"
+    >
+      Previous
+    </button>
+    <span class="page-info">
+      Page {{ page }} of {{ totalPages }} ({{ total }} total)
+    </span>
+    <button
+      type="button"
+      [disabled]="page === totalPages"
+      (click)="onPageChange(page + 1)"
+      aria-label="Next page"
+    >
+      Next
+    </button>
+  </div>
+</div>
+

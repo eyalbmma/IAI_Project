@@ -1,0 +1,6 @@
+@IAI_server_HostAddress = http://localhost:5294
+
+GET {{IAI_server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
