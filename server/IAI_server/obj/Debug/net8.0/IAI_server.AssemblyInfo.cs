@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IAI_server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+089b58e8625c8e46edb50fbbf19395f793e74241")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3344f2d5d538c0a67aa6cbe5e86578357c7e6e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("IAI_server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IAI_server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,55 +1,55 @@
 [
   {
-    "Id": "7a999528-075e-408c-9785-b5b6eca90b99",
-    "Title": "\u05DE\u05D5\u05D3\u05E2\u05D4 \u05D0\u05D9\u05D9\u05DC \u05D7\u05D3\u05E9 ",
-    "Description": "\u05EA\u05D5\u05DB\u05DF \u05DE\u05D5\u05D3\u05E2\u05D4 \u05D0\u05D9\u05D9\u05DC \u05D7\u05D3\u05E9",
-    "Price": 400,
-    "Category": "\u05DE\u05DB\u05D5\u05E0\u05D9\u05D5\u05EA",
+    "Id": "839f1c8e-9542-4387-8e29-6c3e08fe6a07",
+    "Title": "כותרת ",
+    "Description": "תוכן כותרת ",
+    "Price": 200,
+    "Category": "ירקות",
     "Contact": {
-      "Name": "\u05D0\u05D9\u05D9\u05DC",
-      "Phone": "0526350902",
-      "Email": "eyalberda@gmail.com"
+      "Name": "יוסי",
+      "Phone": "05266522541",
+      "Email": "yosi@gmail.com"
+    },
+    "Location": null,
+    "CreatedAt": "2025-11-06T09:51:17.0226016+00:00",
+    "UpdatedAt": "2025-11-06T09:51:17.0226016+00:00"
+  },
+  {
+    "Id": "4dbab46d-fa02-475a-995a-262ba086ebd4",
+    "Title": "מודעה מכוניות ",
+    "Description": "תוכן מודעה מכוניות ",
+    "Price": 200,
+    "Category": "מכוניות ",
+    "Contact": {
+      "Name": "משה",
+      "Phone": "0556654425",
+      "Email": "moshe@gmail.com"
     },
     "Location": {
-      "Address": "\u05E7\u05E8\u05DF \u05D4\u05D9\u05E1\u05D5\u05D3 25 \u05D1\u05EA \u05D9\u05DD ",
+      "Address": "קרן היסוד 25 בת ים",
       "Lat": 32.0047771,
       "Lng": 34.7513617
     },
-    "CreatedAt": "2025-11-05T19:38:59.719136+00:00",
-    "UpdatedAt": "2025-11-05T19:38:59.719136+00:00"
+    "CreatedAt": "2025-11-06T09:56:36.4644728+00:00",
+    "UpdatedAt": "2025-11-06T09:56:36.4644728+00:00"
   },
   {
-    "Id": "5329ab75-8333-4474-9062-b5a45e65c1f6",
-    "Title": "\u05DE\u05D5\u05D3\u05E2\u05D4 \u05D1\u05D9\u05E8\u05D5\u05E9\u05DC\u05D9\u05DD ",
-    "Description": "\u05EA\u05D5\u05DB\u05DF \u05DE\u05D5\u05D3\u05E2\u05D4 \u05D1\u05D9\u05E8\u05D5\u05E9\u05DC\u05D9\u05DD ",
-    "Price": 200,
-    "Category": "\u05DE\u05E1\u05E2\u05D3\u05D4",
+    "Id": "b85785dc-d07c-42fa-9861-d9e4efa0f87a",
+    "Title": "מודעה אשדוד",
+    "Description": "תוכן מודעה אשדוד",
+    "Price": 100,
+    "Category": "שווארמה",
     "Contact": {
-      "Name": "\u05EA\u05D5\u05DE\u05E8",
-      "Phone": "0508366022",
-      "Email": "tomer@gmail.com"
-    },
-    "Location": null,
-    "CreatedAt": "2025-11-05T20:55:33.6893121+00:00",
-    "UpdatedAt": "2025-11-05T20:55:33.6893121+00:00"
-  },
-  {
-    "Id": "e868d325-979a-4d96-b8ac-59e86e7d8013",
-    "Title": "\u05DE\u05D5\u05D3\u05E2\u05D4 \u05D1\u05D1\u05D0\u05E8 \u05E9\u05D1\u05E2",
-    "Description": "\u05EA\u05D5\u05DB\u05DF \u05DE\u05D5\u05D3\u05E2\u05D4 \u05D1\u05D0\u05E8 \u05E9\u05D1\u05E2",
-    "Price": 500,
-    "Category": "\u05D0\u05D5\u05E4\u05E0\u05D9\u05D9\u05DD",
-    "Contact": {
-      "Name": "\u05E2\u05D5\u05E4\u05E8 \u05D1\u05E0\u05D9\u05DE\u05D9\u05DF",
-      "Phone": "0506654487",
-      "Email": "ofer@gmail.com"
+      "Name": "או'שרית אלמוזלינו",
+      "Phone": "0552254478",
+      "Email": "oshrit@gmail.com"
     },
     "Location": {
-      "Address": "\u05D4\u05E8\u05E6\u05DC 70 \u05D1\u05D0\u05E8 \u05E9\u05D1\u05E2",
-      "Lat": 31.2418697,
-      "Lng": 34.7900243
+      "Address": "הרצל 17 אשדוד",
+      "Lat": 31.7966624,
+      "Lng": 34.6436038
     },
-    "CreatedAt": "2025-11-05T20:57:39.8649534+00:00",
-    "UpdatedAt": "2025-11-05T20:57:52.8946188+00:00"
+    "CreatedAt": "2025-11-06T09:58:08.3913999+00:00",
+    "UpdatedAt": "2025-11-06T09:58:47.3330264+00:00"
   }
 ]

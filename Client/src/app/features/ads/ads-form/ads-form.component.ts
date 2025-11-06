@@ -2,8 +2,8 @@ import { Component, OnInit, OnDestroy, AfterViewInit, inject } from '@angular/co
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, AbstractControl, ValidationErrors } from '@angular/forms';
-import { Subject, Subscription } from 'rxjs';
-import { debounceTime, distinctUntilChanged, filter, switchMap, tap, takeUntil } from 'rxjs';
+import { Subject, Subscription, EMPTY } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, switchMap, tap, takeUntil, take, catchError } from 'rxjs';
 import { AdsApiService } from '../../../core/services/ads-api.service';
 import { GeocodingService } from '../../../core/services/geocoding.service';
 import { Ad, CreateAdDto, UpdateAdDto } from '../../../core/models/ad.model';
@@ -128,10 +128,11 @@ export class AdsFormComponent implements OnInit, OnDestroy, AfterViewInit {
             // Clear coordinates if address is cleared
             const locationGroup = this.adForm.get('location');
             locationGroup?.patchValue({ lat: null, lng: null }, { emitEvent: false });
-            this.geocodingError = null;
+            // Don't clear geocodingError here - keep it so user knows there was an error
+            // It will be cleared when a new successful geocoding happens
             this.lastGeocodedAddress = null;
             this.lastSentToSubject = null;
-            console.log('Address cleared - coordinates cleared');
+            console.log('Address cleared - coordinates cleared (keeping error state)');
             return;
           }
           
@@ -140,17 +141,33 @@ export class AdsFormComponent implements OnInit, OnDestroy, AfterViewInit {
           const lastGeocodedNormalized = this.lastGeocodedAddress?.trim().toLowerCase() || '';
           const lastSentNormalized = this.lastSentToSubject?.trim().toLowerCase() || '';
           
-          // Check if we already geocoded this exact address
-          if (normalizedAddress === lastGeocodedNormalized) {
+          // Check if we already geocoded this exact address successfully (with coordinates)
+          if (normalizedAddress === lastGeocodedNormalized && lastGeocodedNormalized !== '') {
             const locationGroup = this.adForm.get('location');
             const currentLat = locationGroup?.get('lat')?.value;
             const currentLng = locationGroup?.get('lng')?.value;
             
             // If coordinates exist, skip geocoding
             if (currentLat && currentLng) {
-              console.log('Skipping geocoding - address already geocoded:', address);
+              console.log('Skipping geocoding - address already geocoded successfully:', address);
               return;
             }
+          }
+          
+          // If there was an error with the previous address, always retry with new address
+          // Also check if this is a different address than what was sent before
+          // If there's an error, always send the new address (even if it's the same, to retry)
+          const hasError = this.geocodingError !== null;
+          const isDifferentAddress = normalizedAddress !== lastSentNormalized;
+          const shouldSend = hasError || isDifferentAddress;
+          
+          if (!shouldSend) {
+            console.log('Skipping geocoding - same address already sent (no error):', address);
+            return;
+          }
+          
+          if (hasError) {
+            console.log('Previous geocoding had error - will retry with address:', address);
           }
           
           // Send to subject - let debounceTime and switchMap handle the optimization
@@ -176,13 +193,22 @@ export class AdsFormComponent implements OnInit, OnDestroy, AfterViewInit {
   private setupAddressGeocoding(): void {
     console.log('setupAddressGeocoding called');
     
+    // Track the current request ID to ignore stale responses
+    let currentRequestId = 0;
+    let cancelPreviousRequest = new Subject<void>();
+    
     // Debounce at the subject level - wait 1500ms after user stops typing
     // Then use switchMap to cancel previous requests if user continues typing
     const geocodingSubscription = this.addressSubject.pipe(
       // Wait 1500ms after last value sent to subject
       debounceTime(1500),
       // Only proceed if address actually changed
+      // But if there was an error, always allow new address even if it looks the same
       distinctUntilChanged((prev, curr) => {
+        // If there's an error, always allow new address (force retry)
+        if (this.geocodingError !== null) {
+          return false; // Force distinct (allow through)
+        }
         const prevNormalized = (prev || '').trim().toLowerCase();
         const currNormalized = (curr || '').trim().toLowerCase();
         return prevNormalized === currNormalized;
@@ -191,23 +217,45 @@ export class AdsFormComponent implements OnInit, OnDestroy, AfterViewInit {
       filter((address): address is string => {
         return !!(address && address.trim().length > 0);
       }),
-      // Set loading state
+      // Cancel previous request and increment request ID
       tap(() => {
-        console.log('Starting geocoding...');
+        // Cancel previous request
+        cancelPreviousRequest.next();
+        cancelPreviousRequest.complete();
+        // Create new cancel subject for next request
+        cancelPreviousRequest = new Subject<void>();
+        
+        currentRequestId++;
+        const requestId = currentRequestId;
+        console.log(`Starting geocoding... (request ID: ${requestId})`);
         this.geocodingInProgress = true;
-        this.geocodingError = null;
+        // Don't clear geocodingError here - let it be cleared only when request succeeds
+        // This allows the error state to persist until a successful geocoding
       }),
       // switchMap will automatically cancel previous requests when a new one comes in
       // This is critical - if user types fast, only the last request will complete
       switchMap(address => {
-        console.log('=== Calling geocoding service for:', address);
-        // Store the address we're geocoding for this request
-        const requestedAddress = address.trim().toLowerCase();
+        const requestId = currentRequestId;
+        const requestedAddress = address.trim();
+        const requestedAddressNormalized = requestedAddress.toLowerCase();
+        const cancelSubject = cancelPreviousRequest; // Capture current cancel subject
         
-        return this.geocodingService.geocodeAddress(address).pipe(
+        console.log(`=== Calling geocoding service for: "${requestedAddress}" (request ID: ${requestId})`);
+        
+        return this.geocodingService.geocodeAddress(requestedAddress).pipe(
+          // Cancel this request if a new one comes in
+          takeUntil(cancelSubject),
+          // Only take the first result (in case of multiple emissions)
+          take(1),
           tap({
             next: (result) => {
-              console.log('Geocoding result received for:', address);
+              // Check if this is still the current request
+              if (requestId !== currentRequestId) {
+                console.log(`Ignoring stale result for request ID ${requestId} (current: ${currentRequestId})`);
+                return;
+              }
+              
+              console.log(`Geocoding result received for: "${requestedAddress}" (request ID: ${requestId})`);
               
               // Verify that the address hasn't changed since we started this request
               const locationGroup = this.adForm.get('location');
@@ -217,12 +265,12 @@ export class AdsFormComponent implements OnInit, OnDestroy, AfterViewInit {
                 
                 // Only update if the address matches what we requested
                 // This prevents stale results from updating the form
-                if (currentAddressNormalized === requestedAddress) {
+                if (currentAddressNormalized === requestedAddressNormalized && requestId === currentRequestId) {
                   console.log('Address matches - updating coordinates');
                   this.geocodingInProgress = false;
                   this.geocodingError = null;
                   this.lastGeocodedAddress = currentAddress;
-                  this.lastSentToSubject = currentAddress; // Update last sent as well
+                  this.lastSentToSubject = currentAddress;
                   
                   locationGroup.patchValue({
                     lat: result.lat,
@@ -231,27 +279,57 @@ export class AdsFormComponent implements OnInit, OnDestroy, AfterViewInit {
                   console.log('Coordinates updated successfully');
                 } else {
                   console.log('Address changed during geocoding - ignoring stale result');
-                  console.log('Requested:', requestedAddress, 'Current:', currentAddressNormalized);
-                  // Don't update geocodingInProgress here - let the new request handle it
+                  console.log('Requested:', requestedAddressNormalized, 'Current:', currentAddressNormalized);
                 }
               }
             },
             error: (error) => {
+              // Check if this is still the current request
+              if (requestId !== currentRequestId) {
+                console.log(`Ignoring stale error for request ID ${requestId} (current: ${currentRequestId})`);
+                return;
+              }
+              
               // Only show error if this is still the current address
               const locationGroup = this.adForm.get('location');
               if (locationGroup) {
                 const currentAddress = locationGroup.get('address')?.value || '';
                 const currentAddressNormalized = currentAddress.trim().toLowerCase();
                 
-                if (currentAddressNormalized === requestedAddress) {
+                if (currentAddressNormalized === requestedAddressNormalized && requestId === currentRequestId) {
                   console.error('Geocoding error:', error);
                   this.geocodingInProgress = false;
                   this.geocodingError = error.message || 'Failed to geocode address. Please enter coordinates manually.';
+                  // Clear lastGeocodedAddress to allow retry with different address
+                  this.lastGeocodedAddress = null;
+                  this.lastSentToSubject = null;
+                  console.log('Error occurred - cleared lastGeocodedAddress to allow retry');
                 } else {
                   console.log('Error for stale request - ignoring');
                 }
               }
             }
+          }),
+          // IMPORTANT: swallow errors so the outer stream stays alive after 4xx/5xx
+          catchError((error) => {
+            // Only handle if still current request and address matches
+            if (requestId === currentRequestId) {
+              const locationGroup = this.adForm.get('location');
+              if (locationGroup) {
+                const currentAddress = locationGroup.get('address')?.value || '';
+                const currentAddressNormalized = currentAddress.trim().toLowerCase();
+                if (currentAddressNormalized === requestedAddressNormalized) {
+                  console.error('Geocoding error (caught):', error);
+                  this.geocodingInProgress = false;
+                  this.geocodingError = error.message || 'Failed to geocode address. Please enter coordinates manually.';
+                  this.lastGeocodedAddress = null;
+                  this.lastSentToSubject = null;
+                  console.log('Error occurred (caught) - cleared lastGeocodedAddress to allow retry');
+                }
+              }
+            }
+            // Do not error the stream; allow further addresses to be processed
+            return EMPTY;
           })
         );
       })
@@ -261,9 +339,8 @@ export class AdsFormComponent implements OnInit, OnDestroy, AfterViewInit {
         console.log('Geocoding subscription next');
       },
       error: (error) => {
-        console.error('Geocoding subscription error:', error);
-        this.geocodingInProgress = false;
-        this.geocodingError = error.message || 'Failed to geocode address. Please enter coordinates manually.';
+        // Should rarely happen now; keep as fallback
+        console.error('Geocoding subscription error (unexpected):', error);
       }
     });
 

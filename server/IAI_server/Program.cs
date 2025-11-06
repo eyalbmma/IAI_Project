@@ -1,4 +1,6 @@
 using System.Text.Json;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using IAI_server.Middleware;
@@ -13,6 +15,14 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnCh
 
 // MVC + ProblemDetails for model state validation
 builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        // Option 1: do not escape non-ASCII characters at all (renders Hebrew as-is)
+        options.JsonSerializerOptions.Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping;
+
+        // Or Option 2: allow broad Unicode ranges (including Hebrew)
+        // options.JsonSerializerOptions.Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
+    })
     .ConfigureApiBehaviorOptions(options =>
     {
         options.InvalidModelStateResponseFactory = context =>
@@ -34,6 +44,9 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// register HttpClient factory required by GeocodingController
+builder.Services.AddHttpClient();
+
 // FluentValidation
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
@@ -51,7 +64,9 @@ builder.Services.AddCors(o => o.AddPolicy(AngularPolicy, p =>
 builder.Services.AddSingleton<IFileLock, FileLock>();
 builder.Services.AddSingleton<IAdsRepository, FileAdsRepository>();
 builder.Services.AddScoped<IAdsService, AdsService>();
-builder.Services.AddHttpClient(); 
+
+// add this (once) during service registration
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 

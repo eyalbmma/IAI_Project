@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Project\\IAI\\server\\IAI_server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\data\\ads.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:data\\ads.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\persistence\\fileadsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:persistence\\fileadsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\controllers\\geocodingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:controllers\\geocodingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\services\\adsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:services\\adsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,18 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\contracts\\adsqueryparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:contracts\\adsqueryparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\data\\ads.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:data\\ads.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\controllers\\geocodingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:controllers\\geocodingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\contracts\\geocoderesponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\persistence\\iadsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:persistence\\iadsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\persistence\\fileadsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|solutionrelative:persistence\\fileadsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7AE7BA5E-F066-4064-937E-02480A5CBAF9}|IAI_server.csproj|c:\\project\\iai\\server\\iai_server\\services\\iadsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -114,11 +118,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ads.json",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Data\\ads.json",
               "RelativeDocumentMoniker": "Data\\ads.json",
@@ -131,7 +135,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "QueryParamsValidator.cs",
+              "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Validation\\QueryParamsValidator.cs",
+              "RelativeDocumentMoniker": "Validation\\QueryParamsValidator.cs",
+              "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\Validation\\QueryParamsValidator.cs",
+              "RelativeToolTip": "Validation\\QueryParamsValidator.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T08:58:52.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAADgv0sAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T08:29:26.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdsQueryParams.cs",
+              "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\AdsQueryParams.cs",
+              "RelativeDocumentMoniker": "Contracts\\AdsQueryParams.cs",
+              "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\AdsQueryParams.cs",
+              "RelativeToolTip": "Contracts\\AdsQueryParams.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T08:51:05.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileAdsRepository.cs",
+              "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Persistence\\FileAdsRepository.cs",
+              "RelativeDocumentMoniker": "Persistence\\FileAdsRepository.cs",
+              "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\Persistence\\FileAdsRepository.cs",
+              "RelativeToolTip": "Persistence\\FileAdsRepository.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAWwFkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T08:53:52.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GeocodingController.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Controllers\\GeocodingController.cs",
               "RelativeDocumentMoniker": "Controllers\\GeocodingController.cs",
@@ -144,59 +198,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "QueryParamsValidator.cs",
-              "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Validation\\QueryParamsValidator.cs",
-              "RelativeDocumentMoniker": "Validation\\QueryParamsValidator.cs",
-              "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\Validation\\QueryParamsValidator.cs",
-              "RelativeToolTip": "Validation\\QueryParamsValidator.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAqwAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:58:52.827Z",
+              "DocumentIndex": 4,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-05T21:12:28.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAnwDUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:29:26.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdsQueryParams.cs",
-              "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\AdsQueryParams.cs",
-              "RelativeDocumentMoniker": "Contracts\\AdsQueryParams.cs",
-              "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\AdsQueryParams.cs",
-              "RelativeToolTip": "Contracts\\AdsQueryParams.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAiwAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:51:05.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "AdsService.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Services\\AdsService.cs",
               "RelativeDocumentMoniker": "Services\\AdsService.cs",
               "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\Services\\AdsService.cs",
               "RelativeToolTip": "Services\\AdsService.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAnwJgAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAnwJgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:52:06.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:52:06.934Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "GeocodeRequest.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\GeocodeRequest.cs",
               "RelativeDocumentMoniker": "Contracts\\GeocodeRequest.cs",
@@ -204,12 +231,11 @@
               "RelativeToolTip": "Contracts\\GeocodeRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T13:13:10.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T13:13:10.517Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "GeocodeResponse.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\GeocodeResponse.cs",
               "RelativeDocumentMoniker": "Contracts\\GeocodeResponse.cs",
@@ -217,12 +243,11 @@
               "RelativeToolTip": "Contracts\\GeocodeResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T13:13:53.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T13:13:53.146Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ErrorHandlingMiddleware.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Middleware\\ErrorHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "Middleware\\ErrorHandlingMiddleware.cs",
@@ -230,12 +255,11 @@
               "RelativeToolTip": "Middleware\\ErrorHandlingMiddleware.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T09:28:34.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T09:28:34.676Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Contact.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Domain\\ValueObjects\\Contact.cs",
               "RelativeDocumentMoniker": "Domain\\ValueObjects\\Contact.cs",
@@ -243,12 +267,11 @@
               "RelativeToolTip": "Domain\\ValueObjects\\Contact.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:49:47.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:49:47.173Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "IFileLock.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Persistence\\IFileLock.cs",
               "RelativeDocumentMoniker": "Persistence\\IFileLock.cs",
@@ -256,12 +279,11 @@
               "RelativeToolTip": "Persistence\\IFileLock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T09:11:24.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T09:11:24.494Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "FileLock.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Persistence\\FileLock.cs",
               "RelativeDocumentMoniker": "Persistence\\FileLock.cs",
@@ -269,12 +291,11 @@
               "RelativeToolTip": "Persistence\\FileLock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:54:12.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:54:12.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "UpdateAdValidator.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Validation\\UpdateAdValidator.cs",
               "RelativeDocumentMoniker": "Validation\\UpdateAdValidator.cs",
@@ -282,12 +303,11 @@
               "RelativeToolTip": "Validation\\UpdateAdValidator.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:58:36.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:58:36.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "CreateAdValidator.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Validation\\CreateAdValidator.cs",
               "RelativeDocumentMoniker": "Validation\\CreateAdValidator.cs",
@@ -295,12 +315,11 @@
               "RelativeToolTip": "Validation\\CreateAdValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:54:33.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:54:33.934Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "IAdsRepository.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Persistence\\IAdsRepository.cs",
               "RelativeDocumentMoniker": "Persistence\\IAdsRepository.cs",
@@ -308,25 +327,11 @@
               "RelativeToolTip": "Persistence\\IAdsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:53:20.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:53:20.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FileAdsRepository.cs",
-              "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Persistence\\FileAdsRepository.cs",
-              "RelativeDocumentMoniker": "Persistence\\FileAdsRepository.cs",
-              "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\Persistence\\FileAdsRepository.cs",
-              "RelativeToolTip": "Persistence\\FileAdsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:53:52.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "IAdsService.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Services\\IAdsService.cs",
               "RelativeDocumentMoniker": "Services\\IAdsService.cs",
@@ -334,12 +339,11 @@
               "RelativeToolTip": "Services\\IAdsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:52:51.65Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:52:51.65Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ProblemDetailsExtensions.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\ProblemDetailsExtensions.cs",
               "RelativeDocumentMoniker": "Contracts\\ProblemDetailsExtensions.cs",
@@ -347,12 +351,11 @@
               "RelativeToolTip": "Contracts\\ProblemDetailsExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:51:41.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:51:41.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "PagedResult.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\PagedResult.cs",
               "RelativeDocumentMoniker": "Contracts\\PagedResult.cs",
@@ -360,12 +363,11 @@
               "RelativeToolTip": "Contracts\\PagedResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:51:19.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:51:19.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "UpdateAdRequest.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\UpdateAdRequest.cs",
               "RelativeDocumentMoniker": "Contracts\\UpdateAdRequest.cs",
@@ -373,12 +375,11 @@
               "RelativeToolTip": "Contracts\\UpdateAdRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:50:51.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:50:51.043Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "CreateAdRequest.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\CreateAdRequest.cs",
               "RelativeDocumentMoniker": "Contracts\\CreateAdRequest.cs",
@@ -386,12 +387,11 @@
               "RelativeToolTip": "Contracts\\CreateAdRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:50:36.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:50:36.979Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "AdDto.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Contracts\\AdDto.cs",
               "RelativeDocumentMoniker": "Contracts\\AdDto.cs",
@@ -399,12 +399,11 @@
               "RelativeToolTip": "Contracts\\AdDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:50:18.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:50:18.873Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Location.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Domain\\ValueObjects\\Location.cs",
               "RelativeDocumentMoniker": "Domain\\ValueObjects\\Location.cs",
@@ -412,12 +411,11 @@
               "RelativeToolTip": "Domain\\ValueObjects\\Location.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:49:58.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:49:58.846Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Ad.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Domain\\Ad.cs",
               "RelativeDocumentMoniker": "Domain\\Ad.cs",
@@ -425,12 +423,11 @@
               "RelativeToolTip": "Domain\\Ad.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:49:31.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:49:31.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "AdsController.cs",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\Controllers\\AdsController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdsController.cs",
@@ -438,21 +435,19 @@
               "RelativeToolTip": "Controllers\\AdsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T08:49:08.853Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:49:08.853Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IAI_server",
+              "DocumentIndex": 26,
+              "Title": "IAI_server.csproj",
               "DocumentMoniker": "C:\\Project\\IAI\\server\\IAI_server\\IAI_server.csproj",
               "RelativeDocumentMoniker": "IAI_server.csproj",
               "ToolTip": "C:\\Project\\IAI\\server\\IAI_server\\IAI_server.csproj",
               "RelativeToolTip": "IAI_server.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-05T08:37:50.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T08:37:50.401Z"
             }
           ]
         }
