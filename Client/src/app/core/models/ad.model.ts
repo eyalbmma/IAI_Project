@@ -50,6 +50,10 @@ export interface AdsQueryParams {
   minPrice?: number;
   maxPrice?: number;
   hasLocation?: boolean;
+  // Location-based filtering (user's current location)
+  userLat?: number;  // User's current latitude
+  userLng?: number;   // User's current longitude
+  radius?: number;    // Radius in kilometers (default: 10km)
   page?: number;
   pageSize?: number;
   sortBy?: string;

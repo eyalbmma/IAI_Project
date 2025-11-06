@@ -37,11 +37,16 @@ export class ApiClientService {
       });
     }
 
-    return this.http.get<T>(`${this.baseUrl}${endpoint}`, {
+    const url = `${this.baseUrl}${endpoint}`;
+    console.log('ApiClientService: GET request to:', url, 'with params:', params);
+    return this.http.get<T>(url, {
       headers: this.getHeaders(),
       params: httpParams
     }).pipe(
-      catchError(this.handleError.bind(this))
+      catchError((error) => {
+        console.error('ApiClientService: GET error for', url, ':', error);
+        return this.handleError(error);
+      })
     );
   }
 
@@ -49,10 +54,15 @@ export class ApiClientService {
    * POST request
    */
   post<T>(endpoint: string, body: any): Observable<T> {
-    return this.http.post<T>(`${this.baseUrl}${endpoint}`, body, {
+    const url = `${this.baseUrl}${endpoint}`;
+    console.log('ApiClientService: POST request to:', url, 'with body:', body);
+    return this.http.post<T>(url, body, {
       headers: this.getHeaders()
     }).pipe(
-      catchError(this.handleError.bind(this))
+      catchError((error) => {
+        console.error('ApiClientService: POST error for', url, ':', error);
+        return this.handleError(error);
+      })
     );
   }
 

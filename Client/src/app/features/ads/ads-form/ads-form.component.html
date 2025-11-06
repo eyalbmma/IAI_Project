@@ -140,8 +140,15 @@
             formControlName="address"
             placeholder="Enter address"
             aria-label="Location address"
+            [class.loading]="geocodingInProgress"
           />
           <small class="hint">If address is provided, latitude and longitude are required</small>
+          <div *ngIf="geocodingInProgress" class="geocoding-status" role="status">
+            <span>Looking up coordinates...</span>
+          </div>
+          <div *ngIf="geocodingError" class="error-message geocoding-error" role="alert">
+            {{ geocodingError }}
+          </div>
         </div>
 
         <div class="form-row">

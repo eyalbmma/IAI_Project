@@ -1,0 +1,55 @@
+[
+  {
+    "Id": "7a999528-075e-408c-9785-b5b6eca90b99",
+    "Title": "\u05DE\u05D5\u05D3\u05E2\u05D4 \u05D0\u05D9\u05D9\u05DC \u05D7\u05D3\u05E9 ",
+    "Description": "\u05EA\u05D5\u05DB\u05DF \u05DE\u05D5\u05D3\u05E2\u05D4 \u05D0\u05D9\u05D9\u05DC \u05D7\u05D3\u05E9",
+    "Price": 400,
+    "Category": "\u05DE\u05DB\u05D5\u05E0\u05D9\u05D5\u05EA",
+    "Contact": {
+      "Name": "\u05D0\u05D9\u05D9\u05DC",
+      "Phone": "0526350902",
+      "Email": "eyalberda@gmail.com"
+    },
+    "Location": {
+      "Address": "\u05E7\u05E8\u05DF \u05D4\u05D9\u05E1\u05D5\u05D3 25 \u05D1\u05EA \u05D9\u05DD ",
+      "Lat": 32.0047771,
+      "Lng": 34.7513617
+    },
+    "CreatedAt": "2025-11-05T19:38:59.719136+00:00",
+    "UpdatedAt": "2025-11-05T19:38:59.719136+00:00"
+  },
+  {
+    "Id": "5329ab75-8333-4474-9062-b5a45e65c1f6",
+    "Title": "\u05DE\u05D5\u05D3\u05E2\u05D4 \u05D1\u05D9\u05E8\u05D5\u05E9\u05DC\u05D9\u05DD ",
+    "Description": "\u05EA\u05D5\u05DB\u05DF \u05DE\u05D5\u05D3\u05E2\u05D4 \u05D1\u05D9\u05E8\u05D5\u05E9\u05DC\u05D9\u05DD ",
+    "Price": 200,
+    "Category": "\u05DE\u05E1\u05E2\u05D3\u05D4",
+    "Contact": {
+      "Name": "\u05EA\u05D5\u05DE\u05E8",
+      "Phone": "0508366022",
+      "Email": "tomer@gmail.com"
+    },
+    "Location": null,
+    "CreatedAt": "2025-11-05T20:55:33.6893121+00:00",
+    "UpdatedAt": "2025-11-05T20:55:33.6893121+00:00"
+  },
+  {
+    "Id": "e868d325-979a-4d96-b8ac-59e86e7d8013",
+    "Title": "\u05DE\u05D5\u05D3\u05E2\u05D4 \u05D1\u05D1\u05D0\u05E8 \u05E9\u05D1\u05E2",
+    "Description": "\u05EA\u05D5\u05DB\u05DF \u05DE\u05D5\u05D3\u05E2\u05D4 \u05D1\u05D0\u05E8 \u05E9\u05D1\u05E2",
+    "Price": 500,
+    "Category": "\u05D0\u05D5\u05E4\u05E0\u05D9\u05D9\u05DD",
+    "Contact": {
+      "Name": "\u05E2\u05D5\u05E4\u05E8 \u05D1\u05E0\u05D9\u05DE\u05D9\u05DF",
+      "Phone": "0506654487",
+      "Email": "ofer@gmail.com"
+    },
+    "Location": {
+      "Address": "\u05D4\u05E8\u05E6\u05DC 70 \u05D1\u05D0\u05E8 \u05E9\u05D1\u05E2",
+      "Lat": 31.2418697,
+      "Lng": 34.7900243
+    },
+    "CreatedAt": "2025-11-05T20:57:39.8649534+00:00",
+    "UpdatedAt": "2025-11-05T20:57:52.8946188+00:00"
+  }
+]

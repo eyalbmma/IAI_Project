@@ -13,7 +13,7 @@ import { Ad, CreateAdDto, UpdateAdDto, AdsQueryParams, AdsResponse } from '../mo
 })
 export class AdsApiService {
   private readonly apiClient = inject(ApiClientService);
-  private readonly endpoint = '/ads';
+  private readonly endpoint = '/Ads';
 
   /**
    * Get list of ads with query parameters

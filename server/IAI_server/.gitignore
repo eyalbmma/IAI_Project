@@ -1,0 +1,36 @@
+# .gitignore for IAI repository (root)
+
+# .NET build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider / IDE
+.idea/
+.vscode/
+
+
+
+# Node / client artifacts
+Client/node_modules/
+Client/dist/
+Client/build/
+Client/package-lock.json
+
+# Logs and temp
+*.log
+*.db
+*.pid
+*.seed
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# User secrets / local config
+appsettings.Development.json
+secrets.json

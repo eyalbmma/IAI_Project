@@ -60,6 +60,34 @@
           </label>
         </div>
 
+        <div class="form-group checkbox-group">
+          <label>
+            <input
+              type="checkbox"
+              formControlName="useCurrentLocation"
+              [disabled]="gettingLocation"
+              aria-label="Filter by current location"
+            />
+            <span *ngIf="!gettingLocation">Near Me</span>
+            <span *ngIf="gettingLocation">Getting location...</span>
+          </label>
+          <div *ngIf="locationError" class="location-error" role="alert">
+            {{ locationError }}
+          </div>
+          <div *ngIf="useCurrentLocation && currentLocation" class="location-info">
+            <small>Filtering within {{ searchForm.get('locationRadius')?.value || locationRadius }}km</small>
+            <input
+              type="number"
+              formControlName="locationRadius"
+              min="1"
+              max="100"
+              placeholder="Radius (km)"
+              class="radius-input"
+              aria-label="Location radius in kilometers"
+            />
+          </div>
+        </div>
+
         <div class="form-group">
           <label for="sortBy">Sort By</label>
           <select id="sortBy" formControlName="sortBy" aria-label="Sort by">
